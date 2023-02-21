@@ -1,8 +1,8 @@
 <?php
-require_once 'select.php';
-// require_once 'insert.php';
+require_once('config.php');
+require_once('select.php');
 // require_once 'update.php';
-require_once 'delete.php';
+require_once('delete.php');
 require_once 'destruct.php';
 
 ?>
@@ -23,7 +23,7 @@ require_once 'destruct.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <div class="card">
                             <div class="card-header">
                                 <h3>Listagem de Clientes</h3>
@@ -67,7 +67,9 @@ require_once 'destruct.php';
                                                 </a>
                                             </td>
                                             <td>
-                                            <a class="btn btn-sm btn-danger"><img src="img/delete.svg" alt="delete"></a>
+                                            <a href="delete.php?id=<?php echo $row['id_cliente']; ?>" class='btn btn-sm  btn-danger'>
+                                            <img src="img/delete.svg">
+                                        </a>
 
                                             </td>
                                         </tr>

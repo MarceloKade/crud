@@ -8,12 +8,17 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <title>Formulário</title>
 </head>
+<?php 
+require_once('config.php');
+require_once('insert.php');
+require_once('destruct.php');
+?>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form action="listagem_de_clientes.php" method="post">
+                <form action="insert.php" method="post">
                     <div class="row">
                         <div class="col-md-8">
                             <div class="card">
