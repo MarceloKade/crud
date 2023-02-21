@@ -62,12 +62,15 @@ require_once 'destruct.php';
                                                 <?php echo date('d/m/Y', strtotime($row['data_nascimento_cliente'])); ?>
                                             </td>
                                             <td>
-                                                <a class='btn btn-sm  btn-primary'>
+                                            <a href="update.php?id=<?php echo $row['id_cliente'] ?>"
+
+                                                class='btn btn-sm  btn-primary'>
                                                     <img src="img/edit.svg">
                                                 </a>
                                             </td>
                                             <td>
-                                            <a href="delete.php?id=<?php echo $row['id_cliente']; ?>" class='btn btn-sm  btn-danger'>
+                                            <a href="delete.php?id=<?php echo $row['id_cliente']; ?>" 
+                                            class='btn btn-sm  btn-danger'>
                                             <img src="img/delete.svg">
                                         </a>
 
