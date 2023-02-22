@@ -9,7 +9,7 @@ if (isset($id) && is_numeric($id)) {
     $stmt->bindParam(':id_cliente', $id);
     $stmt->execute();
     header('Location: listagem_de_clientes.php');
-    exit($id);
+    exit();
 }
 
 

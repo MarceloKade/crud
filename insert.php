@@ -1,9 +1,11 @@
 <?php
 require_once('config.php');
 //Verifica se a tabela existe, senão existir ele cria
-$table = file_get_contents("sql/create.sql");
+$database = file_get_contents("sql/createDatabase.sql");
+$table = file_get_contents("sql/createTable.sql");
+$stmt = $dsn->prepare($database);
 $stmt = $dsn->prepare($table);
-$createTable = $stmt->execute();
+$stmt->execute();
 
 
 //Preparação e inserção de dados no banco de dados
