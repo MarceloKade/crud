@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS teste;
+
+use teste;
+
 CREATE TABLE IF NOT EXISTS cliente (
 id_cliente serial NOT NULL,
 nome_cliente varchar(255),

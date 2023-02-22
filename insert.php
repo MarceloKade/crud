@@ -1,17 +1,7 @@
 <?php
 require_once('config.php');
-// Verifica se o banco de dados existe, senão existir ele cria
-$createDb = file_get_contents("sql/createDatabase.sql");
-$stmv = $dsn->prepare($createDB);
-$dsn->exec($createDb);
-
-// Seleciona o banco de dados criado ou existente
-$useDb = "USE " . DBNAME;
-$stmu = $dsn->prepare($useDb);
-$dsn->exec($useDb);
-
 //Verifica se a tabela existe, senão existir ele cria
-$table = file_get_contents("sql/create.sql");
+$table = file_get_contents("sql/createTable.sql");
 $stmt = $dsn->prepare($table);
 $createTable = $stmt->execute();
 
